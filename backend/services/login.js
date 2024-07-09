@@ -26,7 +26,7 @@ module.exports = {
 }*/
 
 
-const bcrypt = require('bcrypt');
+/*const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const { secretKey, expiresIn } = require('../configuration/jwtconfig');
@@ -53,3 +53,4 @@ exports.authenticateUser = async (email, password) => {
 module.exports={
    
    }
+*/

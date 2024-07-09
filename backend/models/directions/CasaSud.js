@@ -1,5 +1,5 @@
-const mongoose=require("mongoose");
 //const computeAndSaveTotalQuantity = require('../../services/totalService');
+const mongoose=require("mongoose");
 
 const casasudSchema=new mongoose.Schema({
     code:{type:Number,required:true},
@@ -27,6 +27,9 @@ const casasudSchema=new mongoose.Schema({
     eci:{type:String},
     coment:{type:String},
 })
+
+const Casasud=mongoose.model("Casasud",casasudSchema)
+module.exports=Casasud
 /*casasudSchema.post('save', async function () {
     const computeAndSaveTotalQuantity = require('../../services/totalService');
     await computeAndSaveTotalQuantity();
@@ -50,5 +53,3 @@ casasudSchema.post('findOneAndUpdate', async function (doc, next) {
     }
 });
 */
-const Casasud=mongoose.model("Casasud",casasudSchema)
-module.exports=Casasud

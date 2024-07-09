@@ -1,10 +1,10 @@
-const mongoose=require("mongoose")
+/*const mongoose=require("mongoose")
 const express=require("express")
 const cors=require("cors")
 const app=express()
 
 const bodyParser = require("body-parser")
-const authRoutes = require('./routes/authRoutes');
+//const authRoutes = require('./routes/authRoutes');
 
 
 const projRoutes=require("./routes/project.routes")
@@ -36,10 +36,26 @@ const sudRoute=require("./routes/directions/sud.routes")
 const tadlaouardighaRoute=require("./routes/directions/tadlaouardigha.routes")
 
 
-app.use('/', authRoutes);
+//app.use('/', authRoutes);
 const profileRoutes = require('./routes/profileRoutes');
-app.use('/', profileRoutes);
+//app.use('/', profileRoutes);
+////
 
+// index.js
+
+const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
+
+app.use(express.json());
+
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+
+
+
+
+
+////
 const aggregatedDataRoutes = require("./routes/aggregatedDataRoutes");
 //const tableModels = require("./models/directions");
 app.use("/aggregated-data", aggregatedDataRoutes);
@@ -57,7 +73,7 @@ app.use("/projectfactures",projfactRoutes)
 app.use("/budgetfonctionnels",budfoncRoutes)
 app.use("/siege",siegRoutes)
 app.use("/user",signupRoute)
-app.use("/auth",loginRoute)
+//app.use("/auth",loginRoute)
 
 app.use("/casasud",casasudRoute)
 //app.use("/total",totalRoute)
@@ -83,8 +99,117 @@ require("dotenv").config()
    console.log("server is running")
    })
 
-  ).catch(error=>console.log(error))
+  ).catch(error=>console.log(error))*/
 
+//////////////////////////////////////////////////// fo9 5dam
+
+const mongoose = require('mongoose');
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+require('dotenv').config();
+
+//const http = require('http');
+//const WebSocket = require('ws');
+
+const app = express();
+
+//const server = http.createServer(app);
+//const wss = new WebSocket.Server({ server });
+
+// Start WebSocket Server
+const { notifyClients /*, notifyComm*/} = require('./services/websocketServer'); // Adjust the path as necessary
+
+
+// Middleware
+app.use(cors({
+  origin: 'http://localhost:3000', // Replace with your frontend URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow cookies to be sent with requests
+}));
+app.use(bodyParser.json());
+app.use(express.json());
+
+// Routes
+const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
+const projRoutes = require("./routes/project.routes");
+const projfactRoutes = require("./routes/projectFactureRoutes");
+const budfoncRoutes = require("./routes/budgetfonctionnel.routes");
+const siegRoutes = require("./routes/siege.routes");
+const siegtotalRoutes = require("./routes/siegetotalRoutes");
+const signupRoute = require("./routes/signup.routes");
+const casasudRoute = require("./routes/directions/casasud.routes");
+const totalRoutes = require("./routes/totalRoutes");
+const casanordRoute = require("./routes/directions/casanord.routes");
+const doukkalaabdaRoute = require("./routes/directions/doukkalaabda.routes");
+const fesmeknesRoute = require("./routes/directions/fesmeknes.routes");
+const haouzRoute = require("./routes/directions/haouz.routes");
+const nordRoute = require("./routes/directions/nord.routes");
+const orientalRoute = require("./routes/directions/oriental.routes");
+const rabattemaraRoute = require("./routes/directions/rabattemara.routes");
+const salegharbRoute = require("./routes/directions/salegharb.routes");
+const sudRoute = require("./routes/directions/sud.routes");
+const tadlaouardighaRoute = require("./routes/directions/tadlaouardigha.routes");
+const aggregatedDataRoutes = require("./routes/aggregatedDataRoutes");
+const estimRoutes = require("./routes/estimation.routes");
+
+// Route Middlewares
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+app.use('/projects', projRoutes);
+app.use('/projectfactures', projfactRoutes);
+app.use('/budgetfonctionnels', budfoncRoutes);
+app.use('/siege', siegRoutes);
+
+app.use('/estimations', estimRoutes);
+
+app.use('/user', signupRoute);
+app.use('/casasud', casasudRoute);
+app.use('/total', totalRoutes);
+app.use('/siegetotal', siegtotalRoutes);
+app.use('/casanord', casanordRoute);
+app.use('/doukkalaabda', doukkalaabdaRoute);
+app.use('/fesmeknes', fesmeknesRoute);
+app.use('/haouz', haouzRoute);
+app.use('/nord', nordRoute);
+app.use('/oriental', orientalRoute);
+app.use('/rabattemara', rabattemaraRoute);
+app.use('/salegharb', salegharbRoute);
+app.use('/sud', sudRoute);
+app.use('/tadlaouardigha', tadlaouardighaRoute);
+app.use('/aggregated-data', aggregatedDataRoutes);
+
+const PORT = process.env.PORT || 8899;
+
+// MongoDB Connection
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
+  .catch(error => console.log(error));
+
+
+
+// WebSocket connection handling
+/*wss.on('connection', (ws) => {
+    console.log('Client connected');
+  
+    ws.on('close', () => {
+      console.log('Client disconnected');
+    });
+  });
+  
+  // WebSocket notification function
+  function notifyClients(message) {
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(JSON.stringify(message));
+      }
+    });
+  }
+  
+  module.exports = { notifyClients };
+*/
+////////////////////////////////////////////////////
 /*
 const mongoose = require("mongoose");
 const express = require("express");

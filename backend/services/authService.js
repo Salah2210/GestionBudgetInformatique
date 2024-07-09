@@ -1,5 +1,5 @@
 // services/authService.js
-
+/*
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
@@ -27,3 +27,30 @@ const authenticateUser = async (email, password) => {
 };
 
 module.exports = { generateToken, authenticateUser };
+*/
+
+
+
+// services/authService.js
+/*const jwt = require('jsonwebtoken');
+
+const generateToken = (user) => {
+    return jwt.sign({ id: user.id, role: user.role }, process.env.SECRET_KEY, { expiresIn: '1h' });
+};
+module.exports={
+    generateToken,
+  }*/
+// services/authService.js
+const jwt = require('jsonwebtoken');
+
+const generateToken = (user) => {
+    const secretKey = process.env.JWT_SECRET || 'your_secret_key'; // Replace with your secret key
+    const token = jwt.sign({ userId: user.id, role: user.role }, secretKey, { expiresIn: '1h' });
+    return token;
+};
+
+module.exports = {
+    generateToken,
+};
+ 
+ 
