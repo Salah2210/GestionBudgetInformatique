@@ -1,0 +1,133 @@
+/* Reset default margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Page container as a flex container with column layout */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height of viewport */
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #FF7F0E;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Navigation styling */
+  nav {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex: 1; /* Allow main content to grow */
+    padding: 20px;
+  }
+  
+  /* Footer (now renamed to after-main) styling */
+  .after-main {
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Footer links section */
+  .after-main .footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual footer link section */
+  .after-main .footer-links div {
+    flex: 1;
+  }
+  
+  /* Footer link section header */
+  .after-main .footer-links h4 {
+    margin-bottom: 10px;
+  }
+  
+  /* Unordered list styling for footer links */
+  .after-main .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* List item styling for footer links */
+  .after-main .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for footer links */
+  .after-main .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for footer links */
+  .after-main .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Bottom section of footer */
+  .after-main .footer-bottom {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 500px;
+  }
+  
+  /* Social media icons in the footer */
+  .after-main .footer-social a {
+    margin-left: 10px;
+  }
+  
+  /* Legal information section */
+  .after-main .footer-legal {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  
+  /* Styling for legal information links */
+  .after-main .footer-legal a {
+    color: white;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for legal information links */
+  .after-main .footer-legal a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Copyright information at the bottom of the footer */
+  .after-main .footer-copyright {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Separate styling for .bef and .btm sections */
+  .after-main .btm {
+    background: #6c5ce7;
+    padding: 20px;
+  }
+  
+  .after-main .bef {
+    background-color: #636e72;
+    padding: 20px;
+  }
+  

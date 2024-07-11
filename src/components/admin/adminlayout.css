@@ -1,0 +1,27 @@
+/* AdminLayout.css */
+.custom-navbar {
+    background-color: #004d99; /* Darker blue */
+}
+
+.custom-nav-link {
+    color: #fff !important; /* Ensure text is white */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.custom-nav-link:hover, .custom-nav-link:focus {
+    background-color: #003366 !important; /* Even darker blue on hover/focus */
+    color: #ffcc00 !important; /* Change text color on hover/focus */
+}
+
+.custom-dropdown-menu {
+    background-color: #005cbf; /* Slightly different blue for dropdown */
+}
+
+.custom-dropdown-item {
+    color: #ffffff !important; /* White text for dropdown items */
+}
+
+.custom-dropdown-item:hover, .custom-dropdown-item:focus {
+    background-color: #003366 !important; /* Dark blue background on hover/focus */
+    color: #ffcc00 !important; /* Change text color on hover/focus */
+}

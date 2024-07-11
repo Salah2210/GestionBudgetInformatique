@@ -1,0 +1,244 @@
+/*.notifications {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    overflow-y: auto;
+    height: 100vh;
+  }
+  
+  .notification {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .notification ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification ul li {
+    margin: 2px 0;
+    font-size: 12px;
+  }
+  */
+
+  /*
+  .notifications {
+    background-color: black;
+    position: absolute;
+    top: 55px; /* Adjust this value to match the height of your navbar *//*
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Adjust this value to match the height of your navbar *//*
+  }
+  
+  .notification {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .notification ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification ul li {
+    margin: 2px 0;
+    font-size: 12px;
+  }
+  */
+  /*
+  .notifications {
+    position: absolute;
+    top: 55px; /* Adjust this value to match the height of your navbar */
+    /*right: 0;
+    background-color: bisque; /* Set background color to cyan */
+    /*border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Adjust this value to match the height of your navbar */
+  /*}
+  
+  .notification {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .notification ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification ul li {
+    margin: 2px 0;
+    font-size: 12px;
+  }
+  */
+  .notifications {
+    position: absolute;
+    top: 60px; /* Adjust this value to match the height of your navbar */
+    right: 0;
+    background-color: white;            /* Set background color to bisque */
+    /*border: 1px solid #ccc;*/
+    padding: 10px;
+    max-width: 200px;
+    overflow-y: auto;
+    height: calc(100vh - 10px); /* Adjust this value to match the height of your navbar */
+  }
+  
+  .notification {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .notification ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification ul li {
+    margin: 2px 0;
+    font-size: 12px;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .notifications-button {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notifications-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  
+  .notifications-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  h6 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .chart-container {
+    background-color: #f4f4f4;
+    border: 2px solid #ddd;
+    align-items: center;
+
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-section, .middle-section, .bottom-section {
+    margin-bottom: 30px;
+  }
+  
+  .dropdown-container {
+    text-align: center;
+    /*margin-bottom: 20px;*/
+  }
+  
+  .dropdown-container select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .materiels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  /*
+  */
+  /*///*/
+  /*
+  .notifications {
+    position: absolute;
+    top: 55px; /* Adjust this value to match the height of your navbar *//*
+    right: 0;
+    background-color: bisque; /* Set background color to cyan *//*
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 200px;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Adjust this value to match the height of your navbar *//*
+  }
+  
+  .notification {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .notification ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification ul li {
+    margin: 2px 0;
+    font-size: 12px;
+  }*/
+  
